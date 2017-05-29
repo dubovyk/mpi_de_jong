@@ -17,9 +17,12 @@ This application takes 5 arguments from command line (excluding it's own name):
 
 After building the application, you can run it with mpirun command. That will run it on your local node by default (number of the processes will be equal to all available CPU's of your system). Or you can specify hosts in the text file in the following style:
 
-hostname1\n
-hostname2\n
-hostname2\n
+hostname1
+
+hostname2
+
+hostname2
+
 
 And run the application with mpirun -hostfile hosts.txt main 0 1 0 1 0.001
 
