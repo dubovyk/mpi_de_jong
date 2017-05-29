@@ -1,5 +1,9 @@
 # MPI Integral calculator for de Jong function
 
+## Overview
+
+This is an application to numerically calculate integrals of de Jong function. However, it can handle all other functions of two arguments as well. To achieve higher performance OpenMPI is used here, which is however sometimes not a very good idea (e.g. if we have hosts in Lviv, Tokyo and California and our function is something like y = x1 + x2 and we don't need to get very precize result it might be a better idea to run such calculations locally, as data transfer will take more time than parallelism can save in such case.)
+
 ## Compilation
 
 To build and run this app on your laptop/server/cluster/whatever you'll need a OpenMPI installed in your system. More details on getting these things done you can find on the official web-site -- https://www.open-mpi.org/.
