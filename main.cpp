@@ -76,12 +76,16 @@ int main(int argc, char *argv[]) {
     double x0, x1, y0, y1, pres, res, x_interval;
 
     // get arguments and convert into double
-    x0 = std::stod(argv[1]);
-    x1 = std::stod(argv[2]);
-    y0 = std::stod(argv[3]);
-    y1 = std::stod(argv[4]);
-    pres = std::stod(argv[5]);
-
+    try {
+	x0 = std::stod(argv[1]);
+	x1 = std::stod(argv[2]);
+	y0 = std::stod(argv[3]);
+	y1 = std::stod(argv[4]);
+	pres = std::stod(argv[5]);
+    } catch (...){
+	std::cout << "Error parsing arguments. Exiting with -1." << std::endl;
+	return -1;
+    }
     // and some service variables
     int commsize, rank, len;
 
